@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --brand-teal: #008080;
+    --brand-gold: #c59d5f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* Premium Selection Style */
+::selection {
+    background: rgba(197, 157, 95, 0.2);
+    color: #b38d54;
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #dcdcdc;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c59d5f;
+}
+
+/* Utility Classes */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-panel-dark {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #c59d5f 0%, #e0c088 50%, #b38d54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-stroke-gold {
+    -webkit-text-stroke: 1px rgba(197, 157, 95, 0.3);
+    color: transparent;
+}
+
+.section-divider-bottom {
+  position: relative;
+}
+.section-divider-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: inherit;
+  clip-path: polygon(0 100%, 100% 80%, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.tilt-card {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+}
+
+.tappable:active {
+  transform: scale(0.97);
+  transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.parallax-bg {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .parallax-bg {
+    background-attachment: fixed;
+  }
+}
