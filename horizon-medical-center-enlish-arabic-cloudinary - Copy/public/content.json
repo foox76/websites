@@ -1,0 +1,890 @@
+{
+  "en": {
+    "clinicName": "Horizon Medical Center",
+    "logoUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760097277/Gemini_Generated_Image_vdpdiovdpdiovdpd_ypvpdt.png",
+    "phone": "+968 92124088",
+    "email": "horizonmedical@gmail.com",
+    "address": "Flat 12, First Floor, Souq Al-Khoud, Al Khaudh A' Tijiary St, 3353 Way, Seeb 132",
+    "hours": "Sat - Thu: 9:00 AM - 9:00 PM\nFriday: Closed",
+    "navHome": "Home",
+    "navServices": "Services",
+    "navAbout": "About",
+    "navGallery": "Gallery",
+    "navReviews": "Reviews",
+    "navTreatments": "Treatments",
+    "navOffers": "Special Offers",
+    "navContact": "Contact",
+    "heroTitle": "Best Dental Clinic in Seeb",
+    "heroSubtitle": "Affordable Implants, Veneers & Braces. 15+ Years of Experience. Book Your Free Consultation Today.",
+    "heroCtaPrimary": "Claim National Day Offer",
+    "heroCtaSecondary": "Call Now",
+    "getDirectionsButton": "Get Directions",
+    "socialProofTitle": "Trusted by 5,000+ Patients",
+    "socialProofSubtitle": "Rated 4.9/5 on Google. The #1 Choice for Families in Muscat.",
+    "ourServices": "Our Services",
+    "servicesIntro": "Comprehensive care for a healthy, beautiful smile.",
+    "viewDetails": "View Details",
+    "performanceSummaryTitle": "Our Performance at a Glance",
+    "metricHappyPatients": "Happy Patients",
+    "metric5StarReviews": "5-Star Reviews",
+    "metricYearsExperience": "Years Experience",
+    "metricSuccessfulProcedures": "Procedures Done",
+    "whyChooseUsTitle": "Why Choose Horizon?",
+    "whyChooseUsSubtitle": "Experience dental care that puts you first.",
+    "whyItem1Title": "Advanced Technology",
+    "whyItem1Desc": "We use the latest painless technology to ensure your comfort and provide precise, effective treatments.",
+    "whyItem2Title": "Certified Experts",
+    "whyItem2Desc": "Our team consists of highly skilled and certified dentists dedicated to continuous learning and excellence.",
+    "whyItem3Title": "Relaxing Ambiance",
+    "whyItem3Desc": "Our clinic is designed to be a calm and welcoming space, helping you feel at ease from the moment you arrive.",
+    "serviceGeneralTitle": "General Dentistry",
+    "serviceGeneralDesc": "Routine check-ups, cleanings, and fillings to maintain optimal oral health.",
+    "serviceGeneralLongDesc": "General dentistry is the foundation of a healthy smile. Our team provides comprehensive care, including regular check-ups, professional cleanings, and durable fillings. We focus on prevention and early detection to keep your teeth and gums healthy for a lifetime.",
+    "serviceCosmeticTitle": "Cosmetic Dentistry",
+    "serviceCosmeticDesc": "Enhance your smile with teeth whitening, veneers, and smile makeovers.",
+    "serviceCosmeticLongDesc": "Achieve the brilliant smile you've always wanted. Our cosmetic services range from professional teeth whitening to custom-crafted porcelain veneers and complete smile makeovers. We combine artistry with advanced technology to create stunning, natural-looking results.",
+    "serviceOrthoTitle": "Orthodontics",
+    "serviceOrthoDesc": "Straighten your teeth with modern solutions like clear aligners and traditional braces.",
+    "serviceOrthoLongDesc": "A straight smile is a confident smile. We offer a range of orthodontic solutions, including discreet clear aligners and effective traditional braces, to correct misalignments for patients of all ages. Let us help you achieve a healthier, more beautiful alignment.",
+    "serviceImplantsTitle": "Dental Implants",
+    "serviceImplantsDesc": "Permanent, natural-looking solutions for missing teeth.",
+    "serviceImplantsLongDesc": "Dental implants are the gold standard for replacing missing teeth. They provide a strong, stable, and permanent solution that looks, feels, and functions just like a natural tooth. Restore your smile's function and appearance with our expert implant services.",
+    "benefit1": "Experienced Professionals",
+    "benefit2": "State-of-the-Art Technology",
+    "benefit3": "Comfortable Environment",
+    "benefit4": "Personalized Treatment Plans",
+    "benefit5": "Lasting, Natural Results",
+    "benefit6": "Improved Confidence",
+    "faq1Question": "How often should I visit the dentist?",
+    "faq1Answer": "We recommend a routine check-up and cleaning every six months. This allows us to catch any potential issues early and keep your smile healthy.",
+    "faq2Question": "Are dental implants painful?",
+    "faq2Answer": "The procedure is performed under local anesthesia, so you won't feel any pain. Some mild discomfort is normal during recovery, but it is manageable with over-the-counter pain relievers.",
+    "faq3Question": "How long does teeth whitening last?",
+    "faq3Answer": "The effects of professional teeth whitening can last for several months to a few years, depending on your diet and oral hygiene habits. Avoiding staining foods and drinks will prolong the results.",
+    "faq4Question": "Do you offer payment plans?",
+    "faq4Answer": "Yes, we offer flexible payment options to make dental care affordable. Please contact our front desk to discuss the options available to you.",
+    "benefitsTitle": "Key Benefits",
+    "faqTitle": "Frequently Asked Questions",
+    "bookAppointment": "Book an Appointment",
+    "backToServices": "Back to All Services",
+    "reviewsTitle": "Trusted by Our Community",
+    "reviewsSubtitle": "Real reviews from our happy patients on Google.",
+    "reviewsOverallRatingText": "{rating} stars from {total} reviews",
+    "viewAllOnGoogle": "View all on Google",
+    "review1": "Honestly, thank God, I advise everyone to visit this clinic. Their work is 100% and the prices are very, very reasonable and affordable... Thank you🌹",
+    "review2": "The clinic is excellent and the service is wonderful. The entire staff is doing their job and more. I wish them all the best. I hope everyone goes and I don't lose out on my responsibility. Thank you.",
+    "review3": "I thank Horizon Clinic, and I especially thank Dr. Nihal, frankly, the best dentist, and God willing, she is clear and honest with the patient. I thank you very much",
+    "aboutTitle": "Meet Our Dental Team",
+    "aboutSubtitle": "Passionate professionals dedicated to your smile.",
+    "clinicPhilosophy": "Our Philosophy",
+    "clinicPhilosophyText": "At Horizon Medical Center, our philosophy is simple: to provide exceptional dental care in a warm, compassionate, and modern environment. We believe in building lifelong relationships with our patients based on trust, transparency, and a shared commitment to oral health. Your comfort and well-being are our highest priorities.",
+    "drAhmedTitle": "Lead Dentist",
+    "drAhmedBio": "With over 15 years of experience, Dr. Nihal is a leader in cosmetic and restorative dentistry, dedicated to creating beautiful, healthy smiles.",
+    "drFatimaTitle": "Orthodontist",
+    "drFatimaBio": "Dr. Iman specializes in modern orthodontic solutions, helping patients of all ages achieve perfectly aligned teeth and a confident smile.",
+    "galleryTitle": "Smile Transformations",
+    "gallerySubtitle": "See the stunning results we've achieved for our patients.",
+    "galleryTreatment1": "E-Max Smile",
+    "galleryTreatment2": "Hollywood Smile",
+    "galleryTreatment3": "Lumineers Smile",
+    "galleryTreatment4": "E-Max Hollywood Smile",
+    "treatmentsTitle": "Our Treatments",
+    "treatmentsSubtitle": "A comprehensive list of our available dental treatments.",
+    "contactTitle": "Get In Touch",
+    "contactSubtitle": "We're here to help. Contact us to schedule an appointment or ask any questions.",
+    "contactInfoTitle": "Clinic Information",
+    "contactInfoSubtitle": "Find us at our convenient location.",
+    "locationImagesTitle": "Find Us Easily",
+    "altClinicExterior": "Exterior of Horizon Medical Center building",
+    "altClinicEntrance": "Main entrance to Horizon Medical Center",
+    "locationMapTitle": "Our Location on the Map",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "hoursLabel": "Opening Hours",
+    "whatsappLabel": "Book via WhatsApp",
+    "whatsappPrefillGeneral": "Hello! I would like to book an appointment.",
+    "whatsappPrefillService": "Hello! I'm interested in the {serviceName} offer.",
+    "whatsappModalTitle": "Book Your Appointment",
+    "whatsappModalSubtitle": "Your message is ready. Click 'Continue to Chat' to open WhatsApp, or simply call us now.",
+    "whatsappModalCtaPrimary": "Continue to Chat",
+    "whatsappModalCtaSecondary": "Call Us Now",
+    "bookNow": "Book Now",
+    "basedOnReviews": "Based on {total} Google Reviews",
+    "happyPatientsStat": "Happy Patients",
+    "yearsExperienceStat": "Years of Experience",
+    "contactFormTitle": "Send Us a Message",
+    "formNameLabel": "Full Name",
+    "formEmailLabel": "Email Address",
+    "formMessageLabel": "Your Message",
+    "formSubmitButton": "Send Message",
+    "formSubmittingButton": "Sending...",
+    "formSuccessTitle": "Message Sent!",
+    "formSuccessMessage": "Thank you for reaching out. We will get back to you shortly.",
+    "footerAbout": "Providing gentle, modern, and compassionate dental care for the entire family.",
+    "quickLinks": "Quick Links",
+    "allRightsReserved": "All Rights Reserved.",
+    "chatOnWhatsApp": "Chat on WhatsApp",
+    "categoryGeneral": "General Services",
+    "categoryFilling": "Dental Filling",
+    "categoryVeneer": "Veneer",
+    "categoryWhitening": "Teeth Whitening",
+    "categoryRootCanal": "Root Canal Treatment",
+    "categoryPeriodontal": "Periodontal Treatment",
+    "categoryPediatric": "Pediatric Dentistry",
+    "categoryOralSurgery": "Oral Surgery",
+    "categoryProsthodontics": "Prosthodontics / Denture",
+    "categoryCrowns": "Crowns",
+    "categorySmiles": "Smiles",
+    "serviceCheckup": "Checkup & Consultation",
+    "serviceXRay": "Intraoral X-ray",
+    "serviceCleaning": "Teeth Cleaning",
+    "serviceTempFilling": "Temporary Filling",
+    "serviceAmalgamFilling": "Amalgam Filling / Surface",
+    "serviceCompositeFilling": "Composite Filling / Surface",
+    "serviceCavityBase": "Cavity Base",
+    "serviceDiastemaClosure": "Diastema Closure (Space Closure)",
+    "serviceCompositeVeneer": "Composite Veneer / Tooth",
+    "serviceCeramicVeneer": "Ceramic Veneer / Tooth",
+    "serviceLaserWhitening": "Laser Teeth Whitening",
+    "serviceHomeBleaching": "Home Bleaching",
+    "serviceRootAnterior": "Anterior Tooth",
+    "serviceRootPremolar": "Posterior Tooth (Premolar)",
+    "serviceRootMolar": "Posterior Tooth (Molar)",
+    "serviceRetreatRoot": "Retreat Root Canal Anterior Tooth / Root",
+    "serviceRootPlaningTooth": "Root Planing (Per tooth)",
+    "serviceRootPlaningMouth": "Root Planing (Full mouth)",
+    "servicePrimaryExtraction": "Primary Tooth Extraction / Tooth",
+    "serviceSealant": "Sealant",
+    "servicePulpectomy": "Pulpectomy + Stainless Steel Crown",
+    "serviceFluoride": "Fluoride",
+    "serviceAnteriorExtraction": "Anterior Tooth Extraction",
+    "servicePremolarExtraction": "Premolar Tooth Extraction",
+    "serviceMolarExtraction": "Molar Tooth Extraction",
+    "serviceSurgicalRemoval": "Surgical Removal",
+    "servicePartialDenture": "Removable Partial Denture (Acrylic)",
+    "serviceCompleteAcrylic": "Complete Denture Acrylic (Per Piece)",
+    "serviceCompleteFlexible": "Complete Denture Flexible (Per Piece)",
+    "serviceCompleteAcrylicFull": "Complete Denture Acrylic (Full mouth)",
+    "serviceCompleteFlexibleFull": "Complete Denture Flexible (Full mouth)",
+    "servicePostCore": "Post & Core",
+    "servicePFMBase": "Porcelain Fused To Metal - Base Metal Crown",
+    "servicePFMCeramic": "Porcelain Fused To Metal - Ceramic Crown",
+    "serviceTempCrown": "Temporary Crown",
+    "serviceZirconCrown": "Zircon Crown",
+    "serviceEmaxCrown": "Emax Crown",
+    "serviceRemoveCrown": "Remove Crown",
+    "service3DSmile": "3D SMILE",
+    "serviceHollywoodSmile": "HOLLYWOOD SMILE",
+    "serviceSnapOnSmile": "SNAP-ON SMILE",
+    "serviceLumineersSmile": "LUMINEERS SMILE",
+    "serviceZirconSmile": "ZIRCON SMILE (16 TEETH)",
+    "offersTitle": "Our National Day Celebration Offers",
+    "offersSubtitle": "Create your perfect smile with these exclusive, limited-time prices. Don't miss out!",
+    "offersTimerTitle": "Offer ends in:",
+    "offerEmaxTitle": "E-Max Hollywood Smile",
+    "offer3dTitle": "3D Digital Smile Design",
+    "offerCleaningTitle": "Laser Whitening & Cleaning",
+    "offerZirconiaTitle": "Zirconia Crown",
+    "offerTagBestValue": "Best Value",
+    "offerCurrency": "OMR",
+    "offerPerTooth": "per tooth",
+    "offerCta": "Claim My Offer",
+    "timerDays": "Days",
+    "timerHours": "Hours",
+    "timerMinutes": "Minutes",
+    "timerSeconds": "Seconds",
+    "trustQuality": "High Quality Care",
+    "trustTech": "Advanced Tech",
+    "trustComfort": "Painless & Gentle",
+    "meetSpecialistTitle": "Meet Your Specialist",
+    "meetSpecialistSubtitle": "You are in safe hands with our expert.",
+    "announcementBarText": "🇴🇲 Celebrating National Day! Exclusive Offers Inside.",
+    "announcementBarLinkText": "View Offers"
+  },
+  "ar": {
+    "clinicName": "مركز الأفق الطبي",
+    "logoUrl": "/logo.svg",
+    "phone": "+968 92124088",
+    "email": "horizonmedical@gmail.com",
+    "address": "شقة 12، الطابق الأول، سوق الخوض، شارع الخوض التجاري، سكة 3353، السيب 132",
+    "hours": "السبت - الخميس: 9:00 صباحًا - 9:00 مساءً\nالجمعة: مغلق",
+    "navHome": "الرئيسية",
+    "navServices": "خدماتنا",
+    "navAbout": "من نحن",
+    "navGallery": "المعرض",
+    "navReviews": "التقييمات",
+    "navTreatments": "العلاجات",
+    "navOffers": "العروض الخاصة",
+    "navContact": "اتصل بنا",
+    "heroTitle": "أفضل عيادة أسنان في السيب",
+    "heroSubtitle": "زراعة أسنان، فينير وتقويم بأسعار مناسبة. خبرة أكثر من 15 عاماً. احجز استشارتك المجانية اليوم.",
+    "heroCtaPrimary": "احصل على عرض العيد الوطني",
+    "heroCtaSecondary": "اتصل الآن",
+    "getDirectionsButton": "احصل على الاتجاهات",
+    "socialProofTitle": "ثقة أكثر من 5000 مريض",
+    "socialProofSubtitle": "تقييم 4.9/5 على جوجل. الخيار الأول للعائلات في مسقط.",
+    "ourServices": "خدماتنا",
+    "servicesIntro": "رعاية شاملة لابتسامة صحية وجميلة.",
+    "viewDetails": "عرض التفاصيل",
+    "performanceSummaryTitle": "أداؤنا في لمحة",
+    "metricHappyPatients": "مرضى سعداء",
+    "metric5StarReviews": "تقييم 5 نجوم",
+    "metricYearsExperience": "سنوات من الخبرة",
+    "metricSuccessfulProcedures": "إجراءات ناجحة",
+    "whyChooseUsTitle": "لماذا تختار الأفق؟",
+    "whyChooseUsSubtitle": "جرب رعاية الأسنان التي تضعك أولاً.",
+    "whyItem1Title": "تقنية متقدمة",
+    "whyItem1Desc": "نستخدم أحدث التقنيات غير المؤلمة لضمان راحتك وتقديم علاجات دقيقة وفعالة.",
+    "whyItem2Title": "خبراء معتمدون",
+    "whyItem2Desc": "يتكون فريقنا من أطباء أسنان معتمدين وذوي مهارات عالية ومكرسين للتعلم المستمر والتميز.",
+    "whyItem3Title": "أجواء مريحة",
+    "whyItem3Desc": "تم تصميم عيادتنا لتكون مساحة هادئة ومرحبة، مما يساعدك على الشعور بالراحة من لحظة وصولك.",
+    "serviceGeneralTitle": "طب الأسنان العام",
+    "serviceGeneralDesc": "فحوصات دورية، تنظيف، وحشوات للحفاظ على صحة الفم المثلى.",
+    "serviceGeneralLongDesc": "طب الأسنان العام هو أساس الابتسامة الصحية. يقدم فريقنا رعاية شاملة، بما في ذلك الفحوصات الدورية، التنظيف الاحترافي، والحشوات المتينة. نركز على الوقاية والكشف المبكر للحفاظ على صحة أسنانك ولثتك مدى الحياة.",
+    "serviceCosmeticTitle": "طب الأسنان التجميلي",
+    "serviceCosmeticDesc": "عزز ابتسامتك بتبييض الأسنان، الفينير، وتجميل الابتسامة.",
+    "serviceCosmeticLongDesc": "احصل على الابتسامة الرائعة التي طالما رغبت بها. تتراوح خدماتنا التجميلية من تبييض الأسنان الاحترافي إلى قشور البورسلين المصممة خصيصًا وتجميل الابتسامة الكامل. نحن نجمع بين الفن والتكنولوجيا المتقدمة لخلق نتائج مذهلة وطبيعية المظهر.",
+    "serviceOrthoTitle": "تقويم الأسنان",
+    "serviceOrthoDesc": "قم بتقويم أسنانك بحلول عصرية مثل التقويم الشفاف والتقليدي.",
+    "serviceOrthoLongDesc": "الابتسامة المستقيمة هي ابتسامة واثقة. نقدم مجموعة من حلول تقويم الأسنان، بما في ذلك التقويم الشفاف غير المرئي والتقويم التقليدي الفعال، لتصحيح الاختلالات للمرضى من جميع الأعمار. دعنا نساعدك في تحقيق محاذاة أكثر صحة وجمالاً.",
+    "serviceImplantsTitle": "زراعة الأسنان",
+    "serviceImplantsDesc": "حلول دائمة وطبيعية المظهر للأسنان المفقودة.",
+    "serviceImplantsLongDesc": "زراعة الأسنان هي المعيار الذهبي لتعويض الأسنان المفقودة. إنها توفر حلاً قويًا ومستقرًا ودائمًا يبدو ويعمل تمامًا مثل السن الطبيعي. استعد وظيفة ومظهر ابتسامتك من خلال خدمات زراعة الأسنان المتخصصة لدينا.",
+    "benefit1": "متخصصون ذوو خبرة",
+    "benefit2": "أحدث التقنيات",
+    "benefit3": "بيئة مريحة",
+    "benefit4": "خطط علاج شخصية",
+    "benefit5": "نتائج دائمة وطبيعية",
+    "benefit6": "ثقة معززة",
+    "faq1Question": "كم مرة يجب أن أزور طبيب الأسنان؟",
+    "faq1Answer": "نوصي بإجراء فحص وتنظيف روتيني كل ستة أشهر. هذا يسمح لنا باكتشاف أي مشاكل محتملة في وقت مبكر والحفاظ على صحة ابتسامتك.",
+    "faq2Question": "هل زراعة الأسنان مؤلمة؟",
+    "faq2Answer": "يتم إجراء العملية تحت تأثير التخدير الموضعي، لذلك لن تشعر بأي ألم. من الطبيعي الشعور ببعض الانزعاج الخفيف أثناء الشفاء، ولكن يمكن التحكم فيه باستخدام مسكنات الألم المتاحة دون وصفة طبية.",
+    "faq3Question": "كم تدوم نتائج تبييض الأسنان؟",
+    "faq3Answer": "يمكن أن تستمر آثار تبييض الأسنان الاحترافي لعدة أشهر إلى بضع سنوات، اعتمادًا على نظامك الغذائي وعادات نظافة الفم. تجنب الأطعم والمشروبات المسببة للتصبغ سيطيل من النتائج.",
+    "faq4Question": "هل تقدمون خطط دفع؟",
+    "faq4Answer": "نعم، نحن نقدم خيارات دفع مرنة لجعل رعاية الأسنان ميسورة التكلفة. يرجى الاتصال بمكتب الاستقبال لمناقشة الخيارات المتاحة لك.",
+    "benefitsTitle": "الفوائد الرئيسية",
+    "faqTitle": "أسئلة مكررة",
+    "bookAppointment": "احجز موعدًا",
+    "backToServices": "العودة إلى كل الخدمات",
+    "reviewsTitle": "موثوق به من مجتمعنا",
+    "reviewsSubtitle": "تقييمات حقيقية من مرضانا السعداء على جوجل.",
+    "reviewsOverallRatingText": "{rating} نجوم من {total} تقييمًا",
+    "viewAllOnGoogle": "عرض الكل على جوجل",
+    "review1": "الصراحة ما شاء الله انصح الجميع بزيارة هذه العيادة شغلهم 100 % والاسعار جدا جدا مناسبة في متناول اليد... شكرا لكم🌹 …",
+    "review2": " العياده ممتازة والتعامل ولا اروع كل الطاقم قايم بدوره وأكثر كل التوفيق لهم اتمنا من الجميع يروح وما بخسر ع مسؤلتي\nشكرا",
+    "review3": "اشكر عيادة الأفق واخص بالشكر الدكتورة نهال بصراحة أفضل دكتورة  اسنان وماشاءالله عليها واضحة وصادقة مع المريض اشكركم جزيل الشكر",
+    "aboutTitle": "تعرف على فريقنا",
+    "aboutSubtitle": "محترفون شغوفون مكرسون لابتسامتك.",
+    "clinicPhilosophy": "فلسفتنا",
+    "clinicPhilosophyText": "في مركز الأفق الطبي، فلسفتنا بسيطة: تقديم رعاية أسنان استثنائية في بيئة دافئة ورحيمة وعصرية. نؤمن ببناء علاقات مدى الحياة مع مرضانا على أساس الثقة والشفافية والالتزام المشترك بصحة الفم. راحتك ورفاهيتك هي أسمى أولوياتنا.",
+    "drAhmedTitle": "طبيب أسنان رئيسي",
+    "drAhmedBio": "بخبرة تزيد عن 15 عامًا، تعد الدكتورة نهال رائدة في طب الأسنان التجميلي والترميمي، مكرسة لخلق ابتسامسات جميلة وصحية.",
+    "drFatimaTitle": "أخصائية تقويم الأسنان",
+    "drFatimaBio": "تتخصص الدكتورة إيمان في حلول تقويم الأسنان الحديثة، مما يساعد المرضى من جميع الأعمار على تحقيق أسنان مصطفة تمامًا وابتسامة واثقة.",
+    "galleryTitle": "تحولات الابتسامة",
+    "gallerySubtitle": "شاهد النتائج المذهلة التي حققناها لمرضانا.",
+    "galleryTreatment1": "ابتسامة إيماكس",
+    "galleryTreatment2": "ابتسامة هوليوود",
+    "galleryTreatment3": "ابتسامة لومينير",
+    "galleryTreatment4": "ابتسامة هوليوود إيماكس",
+    "treatmentsTitle": "علاجاتنا",
+    "treatmentsSubtitle": "قائمة شاملة بعلاجات الأسنان المتاحة لدينا.",
+    "contactTitle": "ابقى على تواصل",
+    "contactSubtitle": "نحن هنا للمساعدة. اتصل بنا لتحديد موعد أو طرح أي أسئلة.",
+    "contactInfoTitle": "معلومات العيادة",
+    "contactInfoSubtitle": "تجدنا في موقعنا المناسب.",
+    "locationImagesTitle": "تجدنا بسهولة",
+    "altClinicExterior": "مبنى مركز الأفق الطبي من الخارج",
+    "altClinicEntrance": "المدخل الرئيسي لمركز الأفق الطبي",
+    "locationMapTitle": "موقعنا على الخريطة",
+    "addressLabel": "العنوان",
+    "phoneLabel": "الهاتف",
+    "emailLabel": "البريد الإلكتروني",
+    "hoursLabel": "ساعات العمل",
+    "whatsappLabel": "احجز عبر واتساب",
+    "whatsappPrefillGeneral": "مرحباً! أود حجز موعد.",
+    "whatsappPrefillService": "مرحباً! أنا مهتم بعرض {serviceName}.",
+    "whatsappModalTitle": "احجز موعدك",
+    "whatsappModalSubtitle": "رسالتك جاهزة. انقر على 'متابعة الدردشة' لفتح واتساب، أو اتصل بنا مباشرة.",
+    "whatsappModalCtaPrimary": "متابعة الدردشة",
+    "whatsappModalCtaSecondary": "اتصل الآن",
+    "bookNow": "احجز الآن",
+    "basedOnReviews": "بناءً على {total} تقييمًا على جوجل",
+    "happyPatientsStat": "مرضى سعداء",
+    "yearsExperienceStat": "سنوات من الخبرة",
+    "contactFormTitle": "أرسل لنا رسالة",
+    "formNameLabel": "الاسم الكامل",
+    "formEmailLabel": "عنوان البريد الإلكتروني",
+    "formMessageLabel": "رسالتك",
+    "formSubmitButton": "إرسال الرسالة",
+    "formSubmittingButton": "جارٍ الإرسال...",
+    "formSuccessTitle": "تم إرسال الرسالة!",
+    "formSuccessMessage": "شكرًا لتواصلك. سنرد عليك قريبًا.",
+    "footerAbout": "تقديم رعاية أسنان لطيفة وحديثة ورحيمة لجميع أفراد العائلة.",
+    "quickLinks": "روابط سريعة",
+    "allRightsReserved": "كل الحقوق محفوظة.",
+    "chatOnWhatsApp": "تحدث عبر واتساب",
+    "categoryGeneral": "خدمات عامة",
+    "categoryFilling": "حشوة الأسنان",
+    "categoryVeneer": "قشرة (فينير)",
+    "categoryWhitening": "تبييض الأسنان",
+    "categoryRootCanal": "علاج عصب الأسنان",
+    "categoryPeriodontal": "علاج اللثة",
+    "categoryPediatric": "طب أسنان الأطفال",
+    "categoryOralSurgery": "جراحة الفم",
+    "categoryProsthodontics": "التركيبات / طقم الأسنان",
+    "categoryCrowns": "التيجان",
+    "categorySmiles": "الابتسامات",
+    "serviceCheckup": "فحص واستشارة",
+    "serviceXRay": "أشعة سينية داخل الفم",
+    "serviceCleaning": "تنظيف الأسنان",
+    "serviceTempFilling": "حشوة مؤقتة",
+    "serviceAmalgamFilling": "حشوة أملغم / سطح",
+    "serviceCompositeFilling": "حشوة كمبوزيت / سطح",
+    "serviceCavityBase": "قاعدة تجويف",
+    "serviceDiastemaClosure": "إغلاق الفلجة (إغلاق المسافة)",
+    "serviceCompositeVeneer": "فينير كمبوزيت / للسن",
+    "serviceCeramicVeneer": "فينير سيراميك / للسن",
+    "serviceLaserWhitening": "تبييض الأسنان بالليزر",
+    "serviceHomeBleaching": "التبييض المنزلي",
+    "serviceRootAnterior": "سن أمامي",
+    "serviceRootPremolar": "سن خلفي (ضاحك)",
+    "serviceRootMolar": "سن خلفي (طاحن)",
+    "serviceRetreatRoot": "إعادة علاج عصب سن أمامي / جذر",
+    "serviceRootPlaningTooth": "كحت الجذر (للسن)",
+    "serviceRootPlaningMouth": "كحت الجذر (كامل الفم)",
+    "servicePrimaryExtraction": "خلع سن لبني / للسن",
+    "serviceSealant": "ساد الفجوات",
+    "servicePulpectomy": "علاج عصب + تاج معدني مقاوم للصدأ",
+    "serviceFluoride": "فلورايد",
+    "serviceAnteriorExtraction": "خلع سن أمامي",
+    "servicePremolarExtraction": "خلع سن ضاحك",
+    "serviceMolarExtraction": "خلع سن طاحن",
+    "serviceSurgicalRemoval": "إزالة جراحية",
+    "servicePartialDenture": "طقم أسنان جزئي متحرك (أكريليك)",
+    "serviceCompleteAcrylic": "طقم أسنان كامل أكريليك (للقطعة)",
+    "serviceCompleteFlexible": "طقم أسنان كامل مرن (للقطعة)",
+    "serviceCompleteAcrylicFull": "طقم أسنان كامل أكريليك (كامل الفم)",
+    "serviceCompleteFlexibleFull": "طقم أسنان كامل مرن (كامل الفم)",
+    "servicePostCore": "وتد ولب",
+    "servicePFMBase": "تاج بورسلين مدمج بمعدن - تاج معدني أساسي",
+    "servicePFMCeramic": "تاج بورسلين مدمج بمعدن - تاج سيراميك",
+    "serviceTempCrown": "تاج مؤقت",
+    "serviceZirconCrown": "تاج زركون",
+    "serviceEmaxCrown": "تاج إيماكس",
+    "serviceRemoveCrown": "إزالة تاج",
+    "service3DSmile": "ابتسامة ثلاثية الأبعاد",
+    "serviceHollywoodSmile": "ابتسامة هوليود",
+    "serviceSnapOnSmile": "ابتسامة سناب أون",
+    "serviceLumineersSmile": "ابتسامة لومينير",
+    "serviceZirconSmile": "ابتسامة زركون (16 سنًا)",
+    "offersTitle": "عروض احتفالات العيد الوطني",
+    "offersSubtitle": "اصنع ابتسامتك المثالية مع هذه الأسعار الحصرية لفترة محدودة. لا تفوت الفرصة!",
+    "offersTimerTitle": "العرض ينتهي خلال:",
+    "offerEmaxTitle": "ابتسامة هوليود إيماكس",
+    "offer3dTitle": "تصميم الابتسامة الرقمي 3D",
+    "offerCleaningTitle": "باقة تبييض وتنظيف بالليزر",
+    "offerZirconiaTitle": "تركيبات الزيركون",
+    "offerTagBestValue": "الأفضل قيمة",
+    "offerCurrency": "ريال",
+    "offerPerTooth": "للسن الواحد",
+    "offerCta": "أريد هذا العرض",
+    "timerDays": "أيام",
+    "timerHours": "ساعات",
+    "timerMinutes": "دقائق",
+    "timerSeconds": "ثواني",
+    "trustQuality": "عناية عالية الجودة",
+    "trustTech": "تقنية متطورة",
+    "trustComfort": "غير مؤلم ولطيف",
+    "meetSpecialistTitle": "تعرف على اخصائيك",
+    "meetSpecialistSubtitle": "أنت في أيد أمينة مع خبرائنا.",
+    "announcementBarText": "🇴🇲 احتفالات العيد الوطني! عروض حصرية.",
+    "announcementBarLinkText": "عرض الخصومات"
+  },
+  "content": {
+    "logoUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760097277/Gemini_Generated_Image_vdpdiovdpdiovdpd_ypvpdt.png",
+    "heroImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763468441/pexels-jonathanborba-4687906_1_atgnj0.jpg",
+    "aboutBgUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763468742/pexels-cedric-fauntleroy-4270095_1_uinnba.jpg",
+    "whyChooseUsBgUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763468573/pexels-nadezhda-moryak-7800553_1_mbypkd.jpg",
+    "testimonialsBgUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763469515/pexels-cottonbro-6529121_1_epypvt.jpg",
+    "locationImages": [
+      {
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760028979/Gemini_Generated_Image_19pvwe19pvwe19pv_vtytil.png",
+        "altKey": "altClinicExterior"
+      },
+      {
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760028987/Gemini_Generated_Image_nhug2mnhug2mnhug_1_b2ifkr.png",
+        "altKey": "altClinicEntrance"
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2287.9134050235034!2d58.19805710025428!3d23.63223709681318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8dfd7a8eb61fed%3A0x2a2719719b838896!2sHorizon%20Medical%20Center!5e0!3m2!1sen!2som!4v1760095983582!5m2!1sen!2som",
+    "googleMapsDirectionsUrl": "https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyBggCEEUYPdIBCDQ2NzFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=om&sa=X&geocode=Ke0fto56_Y0-MZaIg5txGScq&daddr=First+Floor،+Souq+Al-Khoud,+Al+Khaudh+A%27+Tijiary+St,+3353+Way،+Flat+12,+Seeb+132",
+    "services": [
+      {
+        "id": "general",
+        "titleKey": "serviceGeneralTitle",
+        "descriptionKey": "serviceGeneralDesc",
+        "longDescriptionKey": "serviceGeneralLongDesc",
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763469667/pexels-arvind-philomin-187831830-12148417_1_ci3y2e.jpg",
+        "benefits": [
+          "benefit1",
+          "benefit2",
+          "benefit3",
+          "benefit4"
+        ],
+        "faqs": [
+          {
+            "questionKey": "faq1Question",
+            "answerKey": "faq1Answer"
+          },
+          {
+            "questionKey": "faq4Question",
+            "answerKey": "faq4Answer"
+          }
+        ]
+      },
+      {
+        "id": "cosmetic",
+        "titleKey": "serviceCosmeticTitle",
+        "descriptionKey": "serviceCosmeticDesc",
+        "longDescriptionKey": "serviceCosmeticLongDesc",
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763468742/pexels-cedric-fauntleroy-4270095_1_uinnba.jpg",
+        "benefits": [
+          "benefit5",
+          "benefit6",
+          "benefit2",
+          "benefit4"
+        ],
+        "faqs": [
+          {
+            "questionKey": "faq3Question",
+            "answerKey": "faq3Answer"
+          },
+          {
+            "questionKey": "faq4Question",
+            "answerKey": "faq4Answer"
+          }
+        ]
+      },
+      {
+        "id": "orthodontics",
+        "titleKey": "serviceOrthoTitle",
+        "descriptionKey": "serviceOrthoDesc",
+        "longDescriptionKey": "serviceOrthoLongDesc",
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763469515/pexels-cottonbro-6529121_1_epypvt.jpg",
+        "benefits": [
+          "benefit6",
+          "benefit5",
+          "benefit2",
+          "benefit4"
+        ],
+        "faqs": [
+          {
+            "questionKey": "faq1Question",
+            "answerKey": "faq1Answer"
+          },
+          {
+            "questionKey": "faq4Question",
+            "answerKey": "faq4Answer"
+          }
+        ]
+      },
+      {
+        "id": "implants",
+        "titleKey": "serviceImplantsTitle",
+        "descriptionKey": "serviceImplantsDesc",
+        "longDescriptionKey": "serviceImplantsLongDesc",
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763468573/pexels-nadezhda-moryak-7800553_1_mbypkd.jpg",
+        "benefits": [
+          "benefit5",
+          "benefit1",
+          "benefit2",
+          "benefit6"
+        ],
+        "faqs": [
+          {
+            "questionKey": "faq2Question",
+            "answerKey": "faq2Answer"
+          },
+          {
+            "questionKey": "faq4Question",
+            "answerKey": "faq4Answer"
+          }
+        ]
+      }
+    ],
+    "specialOffersEndDate": "2025-11-22T00:00:00Z",
+    "specialOffers": [
+      {
+        "id": "emax-smile",
+        "titleKey": "offerEmaxTitle",
+        "newPrice": "260",
+        "oldPrice": "350",
+        "currencyKey": "offerCurrency"
+      },
+      {
+        "id": "3d-smile",
+        "titleKey": "offer3dTitle",
+        "newPrice": "340",
+        "oldPrice": "450",
+        "currencyKey": "offerCurrency"
+      },
+      {
+        "id": "cleaning",
+        "titleKey": "offerCleaningTitle",
+        "newPrice": "45",
+        "oldPrice": "60",
+        "currencyKey": "offerCurrency",
+        "tagKey": "offerTagBestValue"
+      },
+      {
+        "id": "zirconia",
+        "titleKey": "offerZirconiaTitle",
+        "newPrice": "49",
+        "oldPrice": "70",
+        "currencyKey": "offerCurrency",
+        "subtextKey": "offerPerTooth"
+      }
+    ],
+    "performanceSummary": {
+      "happyPatients": "1,200+",
+      "fiveStarReviews": "45+",
+      "yearsExperience": "15+",
+      "successfulProcedures": "5,000+"
+    },
+    "whyChooseUs": [
+      {
+        "id": 1,
+        "icon": "TechnologyIcon",
+        "titleKey": "whyItem1Title",
+        "descriptionKey": "whyItem1Desc"
+      },
+      {
+        "id": 2,
+        "icon": "CertifiedDentistIcon",
+        "titleKey": "whyItem2Title",
+        "descriptionKey": "whyItem2Desc"
+      },
+      {
+        "id": 3,
+        "icon": "ComfortableAmbianceIcon",
+        "titleKey": "whyItem3Title",
+        "descriptionKey": "whyItem3Desc"
+      }
+    ],
+    "googleReviews": {
+      "averageRating": 4.7,
+      "totalReviews": 45,
+      "reviewsPageUrl": "https://www.google.com/maps/place/Horizon+Medical+Center/@23.63275,58.1994516,17z/data=!4m18!1m9!3m8!1s0x3e8dfd7a8eb61fed:0x2a2719719b838896!2sHorizon+Medical+Center!8m2!3d23.63275!4d58.1994516!9m1!1b1!16s%2Fg%2F11h34xccsz!3m7!1s0x3e8dfd7a8eb61fed:0x2a2719719b838896!8m2!3d23.63275!4d58.1994516!9m1!1b1!16s%2Fg%2F11h34xccsz?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MTAwNi4wIKXMDSoASAFQAw%3D%3D"
+    },
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Omar Said",
+        "quoteKey": "review1",
+        "rating": 5,
+        "avatarUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUyCr8iQpDceAjgNxi3c-QluJM3nUxFJxxZUVX0PhPn_MHTaU4=w36-h36-p-rp-mo-br100"
+      },
+      {
+        "id": 2,
+        "name": "منذر الدغيشي",
+        "quoteKey": "review2",
+        "rating": 5,
+        "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocKuiY3YSCEEfCzHHtazsi5n70eZ4-enWxRoMtMGmHXmWTxCGQ=w36-h36-p-rp-mo-br100"
+      },
+      {
+        "id": 3,
+        "name": "Aaisha rashid",
+        "quoteKey": "review3",
+        "rating": 5,
+        "avatarUrl": "https://lh3.googleusercontent.com/a/ACg8ocIJFyo05KB_D8pky_E_CLaO-cgl6aXthGF2ltjKNOGC-HnNYg=w36-h36-p-rp-mo-br100"
+      }
+    ],
+    "staff": [
+      {
+        "id": 1,
+        "name": "Dr. Nihal",
+        "titleKey": "drAhmedTitle",
+        "bioKey": "drAhmedBio",
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763470278/Gemini_Generated_Image_ov7byyov7byyov7b_ccgrxy.png"
+      },
+      {
+        "id": 2,
+        "name": "Dr. Iman",
+        "titleKey": "drFatimaTitle",
+        "bioKey": "drFatimaBio",
+        "imageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1763470460/Gemini_Generated_Image_3uwsau3uwsau3uws_pfohol.jpg"
+      }
+    ],
+    "gallery": [
+      {
+        "id": 1,
+        "beforeImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026159/Screenshot_2025-10-09_182029_qeucgt.png",
+        "afterImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026160/Screenshot_2025-10-09_182205_qardnl.png",
+        "treatmentKey": "galleryTreatment1"
+      },
+      {
+        "id": 2,
+        "beforeImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026155/Screenshot_2025-10-08_003738_bjv85a.png",
+        "afterImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026152/Screenshot_2025-10-08_003712_dr9tzk.png",
+        "treatmentKey": "galleryTreatment2"
+      },
+      {
+        "id": 3,
+        "beforeImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026159/Screenshot_2025-10-09_182138_eupp1a.png",
+        "afterImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026159/Screenshot_2025-10-09_182143_jgpwfj.png",
+        "treatmentKey": "galleryTreatment3"
+      },
+      {
+        "id": 4,
+        "beforeImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026154/Screenshot_2025-10-09_181922_hs1hvc.png",
+        "afterImageUrl": "https://res.cloudinary.com/dnvwihkhw/image/upload/v1760026154/Screenshot_2025-10-09_181927_midkvn.png",
+        "treatmentKey": "galleryTreatment4"
+      }
+    ],
+    "treatments": [
+      {
+        "id": "general",
+        "categoryKey": "categoryGeneral",
+        "items": [
+          {
+            "id": 1,
+            "serviceKey": "serviceCheckup"
+          },
+          {
+            "id": 2,
+            "serviceKey": "serviceXRay"
+          },
+          {
+            "id": 3,
+            "serviceKey": "serviceCleaning"
+          }
+        ]
+      },
+      {
+        "id": "filling",
+        "categoryKey": "categoryFilling",
+        "items": [
+          {
+            "id": 4,
+            "serviceKey": "serviceTempFilling"
+          },
+          {
+            "id": 5,
+            "serviceKey": "serviceAmalgamFilling"
+          },
+          {
+            "id": 6,
+            "serviceKey": "serviceCompositeFilling"
+          },
+          {
+            "id": 7,
+            "serviceKey": "serviceCavityBase"
+          },
+          {
+            "id": 8,
+            "serviceKey": "serviceDiastemaClosure"
+          }
+        ]
+      },
+      {
+        "id": "veneer",
+        "categoryKey": "categoryVeneer",
+        "items": [
+          {
+            "id": 9,
+            "serviceKey": "serviceCompositeVeneer"
+          },
+          {
+            "id": 10,
+            "serviceKey": "serviceCeramicVeneer"
+          }
+        ]
+      },
+      {
+        "id": "whitening",
+        "categoryKey": "categoryWhitening",
+        "items": [
+          {
+            "id": 11,
+            "serviceKey": "serviceLaserWhitening"
+          },
+          {
+            "id": 12,
+            "serviceKey": "serviceHomeBleaching"
+          }
+        ]
+      },
+      {
+        "id": "rootcanal",
+        "categoryKey": "categoryRootCanal",
+        "items": [
+          {
+            "id": 13,
+            "serviceKey": "serviceRootAnterior"
+          },
+          {
+            "id": 14,
+            "serviceKey": "serviceRootPremolar"
+          },
+          {
+            "id": 15,
+            "serviceKey": "serviceRootMolar"
+          },
+          {
+            "id": 16,
+            "serviceKey": "serviceRetreatRoot"
+          }
+        ]
+      },
+      {
+        "id": "periodontal",
+        "categoryKey": "categoryPeriodontal",
+        "items": [
+          {
+            "id": 17,
+            "serviceKey": "serviceRootPlaningTooth"
+          },
+          {
+            "id": 18,
+            "serviceKey": "serviceRootPlaningMouth"
+          }
+        ]
+      },
+      {
+        "id": "pediatric",
+        "categoryKey": "categoryPediatric",
+        "items": [
+          {
+            "id": 19,
+            "serviceKey": "servicePrimaryExtraction"
+          },
+          {
+            "id": 20,
+            "serviceKey": "serviceSealant"
+          },
+          {
+            "id": 21,
+            "serviceKey": "servicePulpectomy"
+          },
+          {
+            "id": 22,
+            "serviceKey": "serviceFluoride"
+          }
+        ]
+      },
+      {
+        "id": "oralsurgery",
+        "categoryKey": "categoryOralSurgery",
+        "items": [
+          {
+            "id": 23,
+            "serviceKey": "serviceAnteriorExtraction"
+          },
+          {
+            "id": 24,
+            "serviceKey": "servicePremolarExtraction"
+          },
+          {
+            "id": 25,
+            "serviceKey": "serviceMolarExtraction"
+          },
+          {
+            "id": 26,
+            "serviceKey": "serviceSurgicalRemoval"
+          }
+        ]
+      },
+      {
+        "id": "prosthodontics",
+        "categoryKey": "categoryProsthodontics",
+        "items": [
+          {
+            "id": 27,
+            "serviceKey": "servicePartialDenture"
+          },
+          {
+            "id": 28,
+            "serviceKey": "serviceCompleteAcrylic"
+          },
+          {
+            "id": 29,
+            "serviceKey": "serviceCompleteFlexible"
+          },
+          {
+            "id": 30,
+            "serviceKey": "serviceCompleteAcrylicFull"
+          },
+          {
+            "id": 31,
+            "serviceKey": "serviceCompleteFlexibleFull"
+          },
+          {
+            "id": 32,
+            "serviceKey": "servicePostCore"
+          }
+        ]
+      },
+      {
+        "id": "crowns",
+        "categoryKey": "categoryCrowns",
+        "items": [
+          {
+            "id": 33,
+            "serviceKey": "servicePFMBase"
+          },
+          {
+            "id": 34,
+            "serviceKey": "servicePFMCeramic"
+          },
+          {
+            "id": 35,
+            "serviceKey": "serviceTempCrown"
+          },
+          {
+            "id": 36,
+            "serviceKey": "serviceZirconCrown"
+          },
+          {
+            "id": 37,
+            "serviceKey": "serviceEmaxCrown"
+          },
+          {
+            "id": 38,
+            "serviceKey": "serviceRemoveCrown"
+          }
+        ]
+      },
+      {
+        "id": "smiles",
+        "categoryKey": "categorySmiles",
+        "items": [
+          {
+            "id": 39,
+            "serviceKey": "service3DSmile"
+          },
+          {
+            "id": 40,
+            "serviceKey": "serviceHollywoodSmile"
+          },
+          {
+            "id": 41,
+            "serviceKey": "serviceSnapOnSmile"
+          },
+          {
+            "id": 42,
+            "serviceKey": "serviceLumineersSmile"
+          },
+          {
+            "id": 43,
+            "serviceKey": "serviceZirconSmile"
+          }
+        ]
+      }
+    ]
+  }
+}
