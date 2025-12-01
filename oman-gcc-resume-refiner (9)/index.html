@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oman GCC Resume Refiner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Hide scrollbar for cleaner look in preview panel */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* PRINT STYLES for Ctrl+P / Save as PDF */
+      @media print {
+        @page {
+          margin: 0;
+          size: auto; /* 'auto' allows the browser to handle page breaks better than fixed A4 */
+        }
+
+        /* 1. AGGRESSIVE RESET - REMOVE APP LAYOUT */
+        html, body, #root, main, #preview-column, #preview-scroll-container {
+          background-color: white !important;
+          width: 100% !important;
+          height: auto !important; /* CRITICAL: Allows content to flow naturally */
+          min-height: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow: visible !important; /* CRITICAL: Removes internal scrollbars */
+          display: block !important;
+          position: static !important;
+          border: none !important;
+          box-shadow: none !important;
+          transform: none !important;
+        }
+
+        /* 2. HIDE SCROLLBARS FROM PRINTED OUTPUT */
+        ::-webkit-scrollbar {
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+          background: transparent !important;
+        }
+        
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          color-adjust: exact !important;
+          box-shadow: none !important;
+          scrollbar-width: none !important; /* Firefox */
+        }
+
+        /* 3. HIDE UI ELEMENTS */
+        .no-print, header.no-print, .toolbar, #input-column, button {
+          display: none !important;
+          height: 0 !important;
+          width: 0 !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
+        }
+
+        /* 4. RESUME CONTAINER SETUP */
+        #resume-preview {
+          width: 210mm !important;
+          max-width: 210mm !important;
+          min-width: 210mm !important;
+          padding: 15mm !important; 
+          margin: 0 !important;
+          border: none !important;
+          display: block !important;
+          box-sizing: border-box !important;
+          background: white !important;
+        }
+
+        #resume-preview .grid {
+          display: grid !important;
+          grid-template-columns: 1fr 1fr !important;
+          gap: 1.5rem !important;
+        }
+
+        /* 5. HARDCODED COLORS FOR PRINT (Bypassing Tailwind) */
+        
+        /* Name Header */
+        .print-name {
+          color: #0f172a !important; /* slate-900 */
+        }
+        .print-job-title {
+          color: #065f46 !important; /* emerald-800 */
+        }
+        .print-header-border {
+          border-bottom: 2px solid #1e293b !important; /* slate-800 */
+        }
+        .print-meta span {
+          color: #475569 !important; /* slate-600 */
+        }
+        .print-meta .font-bold {
+          color: #1e293b !important; /* slate-800 */
+        }
+
+        /* Section Headers */
+        .print-section-header {
+          color: #0f172a !important; /* slate-900 */
+          border-bottom: 1px solid #cbd5e1 !important; /* slate-300 */
+        }
+
+        /* Body Text */
+        .print-body-text, li, p {
+          color: #334155 !important; /* slate-700 */
+        }
+
+        /* Jobs */
+        .print-job-role {
+          color: #1e293b !important; /* slate-800 */
+        }
+        .print-company {
+          color: #0f172a !important; /* slate-900 */
+        }
+        .print-date {
+          color: #64748b !important; /* slate-500 */
+        }
+
+        /* Education */
+        .print-university {
+          color: #1e293b !important; /* slate-800 */
+        }
+        .print-degree {
+          color: #334155 !important; /* slate-700 */
+        }
+
+        /* Skill Tags */
+        .print-skill-tag {
+          background-color: #f1f5f9 !important; /* slate-100 */
+          border: 1px solid #e2e8f0 !important; /* slate-200 */
+          color: #334155 !important; /* slate-700 */
+          display: inline-block !important;
+        }
+        
+        /* General Resets */
+        .backdrop-blur-sm {
+          backdrop-filter: none !important;
+          background: transparent !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-100 text-slate-900 antialiased selection:bg-emerald-200 selection:text-emerald-900 overflow-hidden h-screen">
+    <div id="root" class="h-full"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
