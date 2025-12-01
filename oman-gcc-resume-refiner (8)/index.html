@@ -23,65 +23,61 @@
       @media print {
         @page {
           margin: 0;
-          size: A4;
+          size: auto; /* 'auto' allows the browser to handle page breaks better than fixed A4 */
         }
 
-        /* 1. RESET BROWSER & TAILWIND INTERFERENCE */
-        html, body, #root, main {
+        /* 1. AGGRESSIVE RESET - REMOVE APP LAYOUT */
+        html, body, #root, main, #preview-column, #preview-scroll-container {
           background-color: white !important;
-          width: 210mm !important;
-          height: auto !important; /* Changed from 100% to auto to prevent scrollbar logic */
+          width: 100% !important;
+          height: auto !important; /* CRITICAL: Allows content to flow naturally */
+          min-height: 0 !important;
           margin: 0 !important;
           padding: 0 !important;
-          overflow: visible !important;
+          overflow: visible !important; /* CRITICAL: Removes internal scrollbars */
+          display: block !important;
+          position: static !important;
+          border: none !important;
+          box-shadow: none !important;
+          transform: none !important;
         }
 
-        /* Hide scrollbars explicitly */
+        /* 2. HIDE SCROLLBARS FROM PRINTED OUTPUT */
         ::-webkit-scrollbar {
-          display: none;
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+          background: transparent !important;
         }
-
+        
         * {
           -webkit-print-color-adjust: exact !important;
           print-color-adjust: exact !important;
           color-adjust: exact !important;
           box-shadow: none !important;
+          scrollbar-width: none !important; /* Firefox */
         }
 
-        /* 2. HIDE UI ELEMENTS */
+        /* 3. HIDE UI ELEMENTS */
         .no-print, header.no-print, .toolbar, #input-column, button {
           display: none !important;
+          height: 0 !important;
+          width: 0 !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
         }
 
-        /* 3. RESUME CONTAINER SETUP */
-        #preview-column {
-          display: block !important;
-          position: static !important;
-          width: 100% !important;
-          margin: 0 !important;
-          padding: 0 !important;
-          background: white !important;
-          overflow: visible !important;
-        }
-
-        /* Target the specific scroll container from OutputSection */
-        #preview-scroll-container {
-          padding: 0 !important;
-          margin: 0 !important;
-          background: transparent !important;
-          overflow: visible !important;
-          display: block !important;
-          height: auto !important;
-          width: 100% !important;
-        }
-
+        /* 4. RESUME CONTAINER SETUP */
         #resume-preview {
           width: 210mm !important;
+          max-width: 210mm !important;
           min-width: 210mm !important;
           padding: 15mm !important; 
           margin: 0 !important;
           border: none !important;
           display: block !important;
+          box-sizing: border-box !important;
+          background: white !important;
         }
 
         #resume-preview .grid {
@@ -90,7 +86,7 @@
           gap: 1.5rem !important;
         }
 
-        /* 4. HARDCODED COLORS FOR PRINT (Bypassing Tailwind) */
+        /* 5. HARDCODED COLORS FOR PRINT (Bypassing Tailwind) */
         
         /* Name Header */
         .print-name {
@@ -164,10 +160,8 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body class="bg-slate-100 text-slate-900 antialiased selection:bg-emerald-200 selection:text-emerald-900 overflow-hidden h-screen">
     <div id="root" class="h-full"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+  </body>
 </html>
