@@ -1,20 +1,44 @@
 import React, { useState } from 'react';
-import { UserInfo } from '../types';
+import { UserInfo, LayoutMode } from '../types';
 
 interface InputSectionProps {
   onGenerate: (text: string) => void;
   isLoading: boolean;
   userInfo: UserInfo;
   onUserInfoChange: (field: keyof UserInfo, value: string) => void;
+  layoutMode: LayoutMode;
+  onLayoutModeChange: (mode: LayoutMode) => void;
 }
 
-export const InputSection: React.FC<InputSectionProps> = ({ 
-  onGenerate, 
-  isLoading, 
-  userInfo, 
-  onUserInfoChange 
+export const InputSection: React.FC<InputSectionProps> = ({
+  onGenerate,
+  isLoading,
+  userInfo,
+  onUserInfoChange,
+  layoutMode,
+  onLayoutModeChange
 }) => {
   const [inputText, setInputText] = useState('');
+
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        onUserInfoChange('photo', reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleRemovePhoto = () => {
+    onUserInfoChange('photo', '');
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,13 +65,79 @@ export const InputSection: React.FC<InputSectionProps> = ({
         <p className="text-xs text-slate-500 mt-1">
           Enter your details and paste your rough notes below.
         </p>
+
+        {/* Layout Mode Selector */}
+        <div className="mt-4">
+          <label className="block text-xs font-semibold text-slate-700 mb-1.5">CV Layout Mode</label>
+          <div className="relative">
+            <select
+              value={layoutMode}
+              onChange={(e) => onLayoutModeChange(e.target.value as LayoutMode)}
+              className="w-full appearance-none bg-white border border-slate-200 text-slate-700 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-2.5 pr-8"
+            >
+              <option value="compact">Compact (1 Page)</option>
+              <option value="expanded">Expanded (2 Pages)</option>
+              <option value="detailed">Detailed (3 Pages)</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-700">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
-        
+
         {/* Personal Details Section */}
         <div className="space-y-4">
           <label className="block text-sm font-semibold text-slate-700">Personal Information</label>
+
+          {/* Photo Upload */}
+          <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg border border-slate-200 border-dashed">
+            {userInfo.photo ? (
+              <div className="relative group">
+                <img src={userInfo.photo} alt="Preview" className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md" />
+                <button
+                  onClick={handleRemovePhoto}
+                  className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                  title="Remove Photo"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
+                    <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                  </svg>
+                </button>
+              </div>
+            ) : (
+              <div className="w-16 h-16 rounded-full bg-slate-200 flex items-center justify-center text-slate-400">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+                  <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
+                </svg>
+              </div>
+            )}
+
+            <div className="flex-1">
+              <label className="block text-xs font-medium text-slate-900 mb-1">
+                Profile Photo <span className="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="text-xs px-3 py-1.5 bg-white border border-slate-300 rounded text-slate-700 font-medium hover:bg-slate-50 transition-colors"
+                >
+                  {userInfo.photo ? 'Change Photo' : 'Upload Photo'}
+                </button>
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  className="hidden"
+                  accept="image/*"
+                  onChange={handlePhotoChange}
+                />
+              </div>
+            </div>
+          </div>
+
           <input
             type="text"
             placeholder="Full Name"
@@ -75,7 +165,7 @@ export const InputSection: React.FC<InputSectionProps> = ({
         <div className="space-y-4">
           <label className="block text-sm font-semibold text-slate-700">Contact Details</label>
           <div className="grid grid-cols-1 gap-3">
-             <input
+            <input
               type="text"
               placeholder="Phone Number"
               value={userInfo.phone}
@@ -109,33 +199,39 @@ export const InputSection: React.FC<InputSectionProps> = ({
         {/* Education */}
         <div className="space-y-4">
           <label className="block text-sm font-semibold text-slate-700">Education</label>
-           <input
+          <input
             type="text"
             placeholder="University Name"
             value={userInfo.university}
             onChange={(e) => onUserInfoChange('university', e.target.value)}
             className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
           />
-           <div className="flex gap-3">
-             <input
+          <div className="flex gap-3">
+            <input
               type="text"
               placeholder="Degree"
               value={userInfo.degree}
               onChange={(e) => onUserInfoChange('degree', e.target.value)}
               className="flex-1 px-4 py-2.5 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
             />
-             <input
+            <input
               type="text"
               placeholder="GPA"
               value={userInfo.gpa}
               onChange={(e) => onUserInfoChange('gpa', e.target.value)}
               className="w-1/3 px-4 py-2.5 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
             />
-           </div>
-           <textarea
+          </div>
+          <textarea
             placeholder="Certifications & Courses (e.g., PMP, Google Data Analytics, Six Sigma Green Belt)"
             value={userInfo.certifications}
             onChange={(e) => onUserInfoChange('certifications', e.target.value)}
+            className="w-full p-4 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none resize-none transition-all text-sm h-24"
+          />
+          <textarea
+            placeholder="Academic Modules / Subjects (Optional - e.g. Supply Chain Management, Operations Research)"
+            value={userInfo.academicModules}
+            onChange={(e) => onUserInfoChange('academicModules', e.target.value)}
             className="w-full p-4 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none resize-none transition-all text-sm h-24"
           />
         </div>
@@ -143,21 +239,21 @@ export const InputSection: React.FC<InputSectionProps> = ({
         {/* Languages & Skills */}
         <div className="space-y-4">
           <label className="block text-sm font-semibold text-slate-700">Skills & Languages</label>
-           <input
+          <input
             type="text"
             placeholder="Languages (e.g. Arabic, English)"
             value={userInfo.languages}
             onChange={(e) => onUserInfoChange('languages', e.target.value)}
             className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm mb-3"
           />
-           <input
+          <input
             type="text"
             placeholder="Soft Skills (e.g., Teamwork, Leadership)"
             value={userInfo.softSkills}
             onChange={(e) => onUserInfoChange('softSkills', e.target.value)}
             className="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm mb-3"
           />
-           <input
+          <input
             type="text"
             placeholder="Hard Skills / Technical (e.g., Python, SAP)"
             value={userInfo.hardSkills}
@@ -199,9 +295,9 @@ export const InputSection: React.FC<InputSectionProps> = ({
             onClick={handleSubmit}
             disabled={isLoading || !inputText.trim()}
             className={`flex-1 flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-white font-semibold shadow-lg shadow-emerald-600/20 transition-all text-sm
-              ${isLoading 
-              ? 'bg-slate-400 cursor-not-allowed' 
-              : 'bg-emerald-700 hover:bg-emerald-800 hover:shadow-emerald-700/30 active:scale-[0.98]'
+              ${isLoading
+                ? 'bg-slate-400 cursor-not-allowed'
+                : 'bg-emerald-700 hover:bg-emerald-800 hover:shadow-emerald-700/30 active:scale-[0.98]'
               }`}
           >
             {isLoading ? (

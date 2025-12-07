@@ -45,7 +45,7 @@ const RESPONSE_SCHEMA: Schema = {
           items: { type: Type.STRING },
           description: "A list of certifications and courses, formatted neatly (e.g. 'PMP - PMI')."
         },
-        softSkills: { 
+        softSkills: {
           type: Type.ARRAY,
           items: { type: Type.STRING },
           description: "A list of 4-6 soft skills."
@@ -62,8 +62,28 @@ const RESPONSE_SCHEMA: Schema = {
   required: ["summary", "experience", "refinedProfile"],
 };
 
-export const generateProfessionalCV = async (userInfo: UserInfo, rawNotes: string): Promise<ResumeResult> => {
-  const modelId = "gemini-2.5-flash"; 
+import { LayoutMode } from "../types";
+
+export const generateProfessionalCV = async (userInfo: UserInfo, rawNotes: string, layoutMode: LayoutMode = 'compact'): Promise<ResumeResult> => {
+  const modelId = "gemini-2.5-flash";
+
+  let layoutInstruction = "";
+  if (layoutMode === 'compact') {
+    layoutInstruction = `
+    - **Conciseness (CRITICAL):** The user wants a 1-page CV. Keep bullet points tight, impactful, and concise. Limit to 3-4 bullets per role. Summary should be brief (2 sentences).
+    `;
+  } else if (layoutMode === 'expanded') {
+    layoutInstruction = `
+    - **Detail Level:** The user wants a 2-page CV. You have more space. Provide more detail in the bullet points. Elaborate on the 'how' and 'why' of achievements. Aim for 4-6 bullets per role. Summary can be 3-4 sentences.
+    `;
+  } else if (layoutMode === 'detailed') {
+    layoutInstruction = `
+    - **Comprehensive Detail (CRITICAL):** The user wants a detailed 3-page CV. You MUST provide extensive detail.
+    - **Bullet Points:** Generate 6-8 detailed bullet points per role. deeply explaining responsibilities, projects, and outcomes.
+    - **Summary:** Write a comprehensive professional summary (4-5 sentences) highlighting career progression and key expertise.
+    - **Elaborate:** Do not be shy about length. The goal is to fill 3 pages with high-quality, relevant content.
+    `;
+  }
 
   const systemInstruction = `
     You are an expert Executive Resume Writer specializing in the Oman and GCC (Gulf Cooperation Council) job market.
@@ -76,6 +96,7 @@ export const generateProfessionalCV = async (userInfo: UserInfo, rawNotes: strin
     - **Tone:** Formal, professional, respectful (PDO/Omantel style).
     - **Language:** British English spelling.
     - **Metrics:** If the user provides numbers (e.g. '20% increase'), include them.
+    ${layoutInstruction}
 
     TASK 2: GLOBAL AUTO-CORRECT
     Review 'User Profile Data'. Correct spelling, capitalization, and expand GCC acronyms (PDO -> Petroleum Development Oman).
@@ -105,6 +126,7 @@ export const generateProfessionalCV = async (userInfo: UserInfo, rawNotes: strin
     - Soft Skills Input: ${userInfo.softSkills}
     - Hard Skills Input: ${userInfo.hardSkills}
     - Certifications Input: ${userInfo.certifications}
+    - Academic Modules Input: ${userInfo.academicModules}
 
     Raw Experience Notes:
     ${rawNotes}
@@ -118,7 +140,7 @@ export const generateProfessionalCV = async (userInfo: UserInfo, rawNotes: strin
         systemInstruction: systemInstruction,
         responseMimeType: "application/json",
         responseSchema: RESPONSE_SCHEMA,
-        temperature: 0.3,
+        temperature: 0.4, // Slightly increased for creativity in detailed modes
       },
     });
 

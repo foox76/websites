@@ -46,4 +46,8 @@ export interface UserInfo {
   softSkills: string;
   hardSkills: string;
   certifications: string;
+  academicModules: string;
+  photo?: string | null;
 }
+
+export type LayoutMode = 'compact' | 'expanded' | 'detailed';

@@ -1,19 +1,20 @@
 import React from 'react';
-import { ResumeResult, UserInfo } from '../types';
+import { ResumeResult, UserInfo, LayoutMode } from '../types';
 
 interface OutputSectionProps {
   result: ResumeResult | null;
   isLoading: boolean;
   userInfo: UserInfo;
+  layoutMode: LayoutMode;
 }
 
-export const OutputSection: React.FC<OutputSectionProps> = ({ result, isLoading, userInfo }) => {
-  
+export const OutputSection: React.FC<OutputSectionProps> = ({ result, isLoading, userInfo, layoutMode }) => {
+
   const handlePrint = () => {
     const originalTitle = document.title;
     const filename = (result?.refinedProfile?.fullName || userInfo.fullName || 'Resume').replace(/\s+/g, '_');
     document.title = `${filename}_CV`;
-    
+
     window.print();
 
     setTimeout(() => {
@@ -28,7 +29,7 @@ export const OutputSection: React.FC<OutputSectionProps> = ({ result, isLoading,
   const displayUniversity = result?.refinedProfile?.university || userInfo.university;
   const displayDegree = result?.refinedProfile?.degree || userInfo.degree;
   const displayLanguages = result?.refinedProfile?.languages || userInfo.languages;
-  
+
   const refinedCertifications = result?.refinedProfile?.certifications;
   const inputCertifications = userInfo.certifications ? userInfo.certifications.split('\n').map(c => c.trim()).filter(c => c.length > 0) : [];
   const displayCertifications = (refinedCertifications && refinedCertifications.length > 0) ? refinedCertifications : inputCertifications;
@@ -42,9 +43,11 @@ export const OutputSection: React.FC<OutputSectionProps> = ({ result, isLoading,
   const inputHardSkills = userInfo.hardSkills ? userInfo.hardSkills.split(',').map(s => s.trim()).filter(s => s.length > 0) : [];
   const displayHardSkills = (refinedHardSkills.length > 0) ? refinedHardSkills : inputHardSkills;
 
+  const displayAcademicModules = userInfo.academicModules ? userInfo.academicModules.split('\n').map(m => m.trim()).filter(m => m.length > 0) : [];
+
   const placeholderSummary = "Your professional summary will appear here. It will be concise, impactful, and tailored for the GCC market.";
   const displaySummary = result?.summary || placeholderSummary;
-  
+
   const isEmpty = !result && !userInfo.fullName;
 
   const contactItems = [
@@ -68,9 +71,48 @@ export const OutputSection: React.FC<OutputSectionProps> = ({ result, isLoading,
     }
   ];
 
+  // --- Layout Logic ---
+  const getLayoutClasses = () => {
+    switch (layoutMode) {
+      case 'expanded':
+        return {
+          container: 'p-[12mm] min-h-[297mm]', // Standard A4 padding
+          textBase: 'text-sm', // Larger text
+          textSmall: 'text-xs',
+          headerMargin: 'mb-4',
+          sectionSpacing: 'space-y-6',
+          leading: 'leading-relaxed',
+          gridGap: 'gap-6'
+        };
+      case 'detailed':
+        return {
+          container: 'p-[12mm] min-h-[297mm]',
+          textBase: 'text-base', // Even larger
+          textSmall: 'text-sm',
+          headerMargin: 'mb-6',
+          sectionSpacing: 'space-y-8',
+          leading: 'leading-loose',
+          gridGap: 'gap-8'
+        };
+      case 'compact':
+      default:
+        return {
+          container: 'p-[10mm] min-h-[297mm]', // Tight padding
+          textBase: 'text-[10px]', // Small text
+          textSmall: 'text-[9px]',
+          headerMargin: 'mb-2',
+          sectionSpacing: 'space-y-3.5',
+          leading: 'leading-snug',
+          gridGap: 'gap-4'
+        };
+    }
+  };
+
+  const layout = getLayoutClasses();
+
   return (
     <div className="w-full h-full flex flex-col items-center">
-      
+
       {/* Toolbar */}
       <div className="w-full bg-white/80 backdrop-blur-sm border-b border-slate-200 px-8 py-4 flex justify-between items-center sticky top-0 z-20 no-print toolbar">
         <h3 className="font-semibold text-slate-700">Live Preview</h3>
@@ -87,85 +129,102 @@ export const OutputSection: React.FC<OutputSectionProps> = ({ result, isLoading,
 
       {/* Scrollable Canvas Area */}
       <div id="preview-scroll-container" className="flex-1 w-full overflow-y-auto p-8 flex justify-center bg-slate-100">
-        
-        {/* A4 Page Container - Compact Mode */}
-        <div 
-          id="resume-preview" 
-          className={`bg-white shadow-2xl transition-all duration-500 w-[210mm] min-h-[297mm] p-[12mm] relative flex flex-col ${isLoading ? 'blur-[1px]' : ''}`}
+
+        {/* A4 Page Container */}
+        <div
+          id="resume-preview"
+          className={`bg-white shadow-2xl transition-all duration-500 w-[210mm] relative flex flex-col mode-${layoutMode} ${layout.container} ${isLoading ? 'blur-[1px]' : ''}`}
         >
-          
+
           {/* Loading Overlay */}
           {isLoading && (
             <div className="absolute inset-0 bg-white/60 z-10 flex items-center justify-center no-print">
               <div className="flex flex-col items-center gap-3">
-                 <svg className="animate-spin h-8 w-8 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  <p className="text-emerald-800 font-medium animate-pulse">Refining Resume...</p>
+                <svg className="animate-spin h-8 w-8 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <p className="text-emerald-800 font-medium animate-pulse">Refining Resume...</p>
               </div>
             </div>
           )}
 
           {/* Header */}
-          <header className="border-b-2 border-slate-800 pb-3 mb-3 text-center print-header-border">
-            <h1 className="print-name text-2xl font-bold text-slate-900 uppercase tracking-tight mb-0.5">
-              {displayFullName}
-            </h1>
-            <h2 className="print-job-title text-base font-medium text-emerald-800 mb-1.5">
-              {displayJobTitle}
-            </h2>
-            
-            <div className="flex flex-wrap gap-y-0.5 text-[10px] text-slate-600 items-center justify-center">
-              {contactItems.length > 0 ? (
-                contactItems.map((item, index) => (
-                  <div key={item.label} className="print-meta flex items-center">
-                    {index > 0 && (
-                      <span className="mx-2 text-slate-300 select-none">|</span>
-                    )}
-                    <span className="font-bold text-slate-800 mr-1">{item.label}:</span>
-                    <span className="text-slate-600">{item.value}</span>
-                  </div>
-                ))
-              ) : (
-                isEmpty && (
-                  <span className="text-slate-400 italic">Contact details will appear here</span>
-                )
+          <header className={`border-b-2 border-slate-800 pb-3 ${layout.headerMargin} print-header-border`}>
+            <div className={`flex items-center ${userInfo.photo ? 'justify-between text-left' : 'justify-center text-center'}`}>
+
+              {/* Text Container */}
+              <div className={userInfo.photo ? 'flex-1' : 'w-full'}>
+                <h1 className={`print-name font-bold text-slate-900 uppercase tracking-tight mb-0.5 ${layoutMode === 'detailed' ? 'text-4xl' : layoutMode === 'expanded' ? 'text-3xl' : 'text-2xl'}`}>
+                  {displayFullName}
+                </h1>
+                <h2 className={`print-job-title font-medium text-emerald-800 mb-1.5 ${layoutMode === 'detailed' ? 'text-xl' : layoutMode === 'expanded' ? 'text-lg' : 'text-base'}`}>
+                  {displayJobTitle}
+                </h2>
+
+                <div className={`flex flex-wrap gap-y-0.5 text-slate-600 ${userInfo.photo ? 'justify-start' : 'justify-center'} ${layout.textBase}`}>
+                  {contactItems.length > 0 ? (
+                    contactItems.map((item, index) => (
+                      <div key={item.label} className="print-meta flex items-center">
+                        {index > 0 && (
+                          <span className="mx-2 text-slate-300 select-none">|</span>
+                        )}
+                        <span className="font-bold text-slate-800 mr-1">{item.label}:</span>
+                        <span className="text-slate-600">{item.value}</span>
+                      </div>
+                    ))
+                  ) : (
+                    isEmpty && (
+                      <span className="text-slate-400 italic">Contact details will appear here</span>
+                    )
+                  )}
+                </div>
+              </div>
+
+              {/* Photo */}
+              {userInfo.photo && (
+                <div className="ml-6 shrink-0 print-photo-container">
+                  <img
+                    src={userInfo.photo}
+                    alt="Profile"
+                    className="w-[35mm] h-[45mm] object-cover rounded shadow-md print-photo border border-slate-200"
+                  />
+                </div>
               )}
             </div>
           </header>
 
-          <div className="space-y-3.5 flex-1">
-            
+          <div className={`flex-1 ${layout.sectionSpacing}`}>
+
             {/* Summary */}
             <section>
-              <h3 className="print-section-header text-[11px] font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5">
+              <h3 className={`print-section-header font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5 ${layoutMode === 'detailed' ? 'text-sm' : layoutMode === 'expanded' ? 'text-xs' : 'text-[11px]'}`}>
                 Professional Summary
               </h3>
-              <p className={`print-body-text text-justify leading-snug text-[10px] text-slate-700 ${!result && 'text-slate-400 italic'}`}>
+              <p className={`print-body-text text-justify text-slate-700 ${layout.leading} ${layout.textBase} ${!result && 'text-slate-400 italic'}`}>
                 {displaySummary}
               </p>
             </section>
 
             {/* Experience */}
             <section>
-              <h3 className="print-section-header text-[11px] font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5">
+              <h3 className={`print-section-header font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5 ${layoutMode === 'detailed' ? 'text-sm' : layoutMode === 'expanded' ? 'text-xs' : 'text-[11px]'}`}>
                 Experience
               </h3>
-              
-              <div className="space-y-2.5">
+
+              <div className={layoutMode === 'detailed' ? 'space-y-6' : layoutMode === 'expanded' ? 'space-y-4' : 'space-y-2.5'}>
                 {experienceData.map((job, idx) => (
                   <div key={idx}>
                     <div className="flex justify-between items-baseline mb-0.5">
-                       <h4 className="print-job-row font-bold text-slate-800 text-xs">
+                      <h4 className={`print-job-row font-bold text-slate-800 ${layoutMode === 'detailed' ? 'text-base' : layoutMode === 'expanded' ? 'text-sm' : 'text-xs'}`}>
                         <span className="print-job-role">{job.jobTitle}</span> <span className="text-slate-400 mx-1 font-light">|</span> <span className="print-company font-bold">{job.company}</span>
-                       </h4>
-                       <span className="print-date text-slate-500 text-[9px] italic whitespace-nowrap">{job.startDate} - {job.endDate}</span>
+                      </h4>
+                      <span className={`print-date text-slate-500 italic whitespace-nowrap ${layout.textSmall}`}>{job.startDate} - {job.endDate}</span>
                     </div>
-                    
-                    <ul className="list-disc list-outside ml-3 space-y-0.5">
+
+                    <ul className={`list-disc list-outside ml-3 space-y-0.5 ${layout.leading}`}>
                       {job.bulletPoints.map((point, i) => (
-                        <li key={i} className={`print-body-text pl-1 leading-snug text-[10px] text-slate-700 ${!result && 'text-slate-400 italic'}`}>
+                        <li key={i} className={`print-body-text pl-1 text-slate-700 ${layout.textBase} ${!result && 'text-slate-400 italic'}`}>
                           {point}
                         </li>
                       ))}
@@ -175,100 +234,112 @@ export const OutputSection: React.FC<OutputSectionProps> = ({ result, isLoading,
               </div>
             </section>
 
-             {/* Education */}
-             <section>
-               <h3 className="print-section-header text-[11px] font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5">
+            {/* Education */}
+            <section>
+              <h3 className={`print-section-header font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5 ${layoutMode === 'detailed' ? 'text-sm' : layoutMode === 'expanded' ? 'text-xs' : 'text-[11px]'}`}>
                 Education
               </h3>
-               <div className="text-slate-700 text-[10px]">
+              <div className={`text-slate-700 ${layout.textBase}`}>
                 {(displayUniversity || displayDegree || !isEmpty) ? (
-                   <div className="flex flex-col">
-                     <span className="print-university font-bold text-slate-800">{displayUniversity || "Sultan Qaboos University"}</span>
-                     <div className="flex flex-wrap gap-x-2 text-[10px] mt-0.5">
-                       <span className="print-degree italic">{displayDegree || "Bachelor of Engineering"}</span>
-                       {userInfo.gpa && (
-                         <>
-                           <span className="text-slate-400">|</span>
-                           <span>GPA: {userInfo.gpa}</span>
-                         </>
-                       )}
-                     </div>
-                   </div>
+                  <div className="flex flex-col">
+                    <span className="print-university font-bold text-slate-800">{displayUniversity || "Sultan Qaboos University"}</span>
+                    <div className={`flex flex-wrap gap-x-2 mt-0.5 ${layout.textBase}`}>
+                      <span className="print-degree italic">{displayDegree || "Bachelor of Engineering"}</span>
+                      {userInfo.gpa && (
+                        <>
+                          <span className="text-slate-400">|</span>
+                          <span>GPA: {userInfo.gpa}</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
                 ) : (
                   <div className="text-slate-400 italic">
-                     Degree | University Name | GPA (Optional)
+                    Degree | University Name | GPA (Optional)
                   </div>
                 )}
-               </div>
-             </section>
+              </div>
 
-             {/* Grid */}
-             <div className="grid grid-cols-2 gap-5">
-               
-               {/* Left Col */}
-               <div className="space-y-3">
-                 <section>
-                   <h3 className="print-section-header text-[11px] font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5">
+              {/* Academic Modules (Optional) */}
+              {displayAcademicModules.length > 0 && (
+                <div className="mt-2">
+                  <h4 className={`font-semibold text-slate-800 mb-1 ${layout.textBase}`}>Key Modules:</h4>
+                  <div className={`flex flex-wrap gap-1.5 text-slate-700 ${layout.textBase}`}>
+                    {displayAcademicModules.map((module, i) => (
+                      <span key={i} className="bg-slate-50 px-2 py-0.5 rounded border border-slate-100">{module}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+
+            {/* Grid */}
+            <div className={`grid grid-cols-2 ${layout.gridGap}`}>
+
+              {/* Left Col */}
+              <div className={layoutMode === 'detailed' ? 'space-y-6' : 'space-y-3'}>
+                <section>
+                  <h3 className={`print-section-header font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5 ${layoutMode === 'detailed' ? 'text-sm' : layoutMode === 'expanded' ? 'text-xs' : 'text-[11px]'}`}>
                     Certifications & Courses
                   </h3>
-                   <ul className="list-disc list-outside ml-3 space-y-0.5">
-                      {displayCertifications.length > 0 ? (
-                         displayCertifications.map((cert, i) => (
-                            <li key={i} className="print-body-text text-slate-700 text-[10px] leading-tight">{cert}</li>
-                         ))
-                      ) : (
-                         <li className="text-slate-400 italic list-none ml-0 text-[10px]">e.g. PMP, Six Sigma</li>
-                      )}
-                   </ul>
-                 </section>
+                  <ul className={`list-disc list-outside ml-3 space-y-0.5 ${layout.leading}`}>
+                    {displayCertifications.length > 0 ? (
+                      displayCertifications.map((cert, i) => (
+                        <li key={i} className={`print-body-text text-slate-700 ${layout.textBase}`}>{cert}</li>
+                      ))
+                    ) : (
+                      <li className={`text-slate-400 italic list-none ml-0 ${layout.textBase}`}>e.g. PMP, Six Sigma</li>
+                    )}
+                  </ul>
+                </section>
 
-                 <section>
-                   <h3 className="print-section-header text-[11px] font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5">
+                <section>
+                  <h3 className={`print-section-header font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5 ${layoutMode === 'detailed' ? 'text-sm' : layoutMode === 'expanded' ? 'text-xs' : 'text-[11px]'}`}>
                     Languages
                   </h3>
-                   <div className={`print-body-text text-slate-700 text-[10px] ${(!displayLanguages && isEmpty) && 'text-slate-400 italic'}`}>
+                  <div className={`print-body-text text-slate-700 ${layout.textBase} ${(!displayLanguages && isEmpty) && 'text-slate-400 italic'}`}>
                     {displayLanguages || "Arabic (Native), English (Professional)"}
-                   </div>
-                 </section>
-               </div>
+                  </div>
+                </section>
+              </div>
 
-                {/* Right Col */}
-               <div className="space-y-3">
-                 <section>
-                   <h3 className="print-section-header text-[11px] font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5">
+              {/* Right Col */}
+              <div className={layoutMode === 'detailed' ? 'space-y-6' : 'space-y-3'}>
+                <section>
+                  <h3 className={`print-section-header font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5 ${layoutMode === 'detailed' ? 'text-sm' : layoutMode === 'expanded' ? 'text-xs' : 'text-[11px]'}`}>
                     Key Skills (Hard)
                   </h3>
-                  <div className="flex flex-wrap gap-1.5 text-[10px] text-slate-700">
+                  <div className={`flex flex-wrap gap-1.5 text-slate-700 ${layout.textBase}`}>
                     {displayHardSkills.length > 0 ? (
                       displayHardSkills.map((skill, index) => (
-                         <span key={index} className="print-skill-tag bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 leading-none">{skill}</span>
+                        <span key={index} className="print-skill-tag bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 leading-none">{skill}</span>
                       ))
                     ) : (
-                      <span className="text-slate-400 italic text-[10px]">Technical skills inferred from input</span>
+                      <span className={`text-slate-400 italic ${layout.textBase}`}>Technical skills inferred from input</span>
                     )}
                   </div>
-                 </section>
+                </section>
 
-                 <section>
-                   <h3 className="print-section-header text-[11px] font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5">
+                <section>
+                  <h3 className={`print-section-header font-bold text-slate-900 uppercase tracking-wider border-b border-slate-300 pb-0.5 mb-1.5 ${layoutMode === 'detailed' ? 'text-sm' : layoutMode === 'expanded' ? 'text-xs' : 'text-[11px]'}`}>
                     Soft Skills
                   </h3>
-                  <div className="flex flex-wrap gap-1.5 text-[10px] text-slate-700">
+                  <div className={`flex flex-wrap gap-1.5 text-slate-700 ${layout.textBase}`}>
                     {displaySoftSkills.length > 0 ? (
                       displaySoftSkills.map((skill, index) => (
-                         <span key={index} className="print-skill-tag bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 leading-none">{skill}</span>
+                        <span key={index} className="print-skill-tag bg-slate-100 px-1.5 py-0.5 rounded border border-slate-200 leading-none">{skill}</span>
                       ))
                     ) : (
-                       <span className="text-slate-400 italic text-[10px]">e.g. Leadership, Teamwork</span>
+                      <span className={`text-slate-400 italic ${layout.textBase}`}>e.g. Leadership, Teamwork</span>
                     )}
                   </div>
-                 </section>
-               </div>
+                </section>
+              </div>
 
-             </div>
+            </div>
 
           </div>
-          
+
         </div>
       </div>
     </div>
